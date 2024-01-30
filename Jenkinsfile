@@ -1,28 +1,11 @@
-pipeline{
+pipeline {
     agent any
-}
-
-    environment{
-        registry = "<dockerhub-username>/<repo-name>"
-        registryCredential = '<dockerhub-credential-name>'  
-    }
 
     stages{
-       stage('Building image') {
-      steps{
-        script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+        stage('Checkout') {
+            steps{
+               checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/m-ali4721/d_camp_a3']]) 
+            }
         }
-      }
-    }
-
-        stage('Deploy Image') {
-      steps{
-         script {
-            docker.withRegistry( '', registryCredential ) {
-            dockerImage.push()
-          }
-        }
-      }
     }
 }
