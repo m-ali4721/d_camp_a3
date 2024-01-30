@@ -4,6 +4,7 @@ pipeline {
     environment {
         dockerImage =''
         registry = 'makbar4721/dicea3'
+        registrCredential='dockerhub_id'
     }
 
     stages{
@@ -20,5 +21,27 @@ pipeline {
                 }
             }
         }
+
+        stage('Uploading Image'){
+            steps {
+                script{
+                    docker.withRegistry('', registryCredential){
+                        dockerImage.push()
+                    }
+
+                }
+            }
+        }
+
+        stage(docker run){
+            steps {
+                script{
+                    docker.withRegistry('', registryCredential) {
+                        docker.image(registry).run('-p 8020:8020' --name dicea3c)
+                    }
+                }
+            }
+        }
+
+        }
     }
-}
