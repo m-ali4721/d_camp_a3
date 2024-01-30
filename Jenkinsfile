@@ -37,7 +37,7 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', registryCredential) {
-                        docker.image(registry).run("-p 8020:8020 --name dicea3c")
+                        docker.image(registry).run("-p 8020:8020 --name dicea3c1")
                     }
                 }
             }
