@@ -1,8 +1,8 @@
-Jenkins has been used as the CI/CD Tool:
+**Jenkins has been used as the CI/CD Tool:
 
 
 Docker Image was created to build app.py application by using the stage of Build with corresponding script and following Output was produced depicting that it was successfully built and exported to Dockerhub:
-
+**
 ==================================================================================
 docker build -t makbar4721/dicea3 .
 #0 building with "default" instance using docker driver
@@ -124,8 +124,8 @@ dbf081da55eb: Pushed
 
 ===================================================================================
 
-Moving forward, next stage for Docker Run was used through utilizing the previously built image and port was bound to 8020:
-
+**Moving forward, next stage for Docker Run was used through utilizing the previously built image and port was bound to 8020:
+**
 [Pipeline] { (docker run)
 [Pipeline] script
 [Pipeline] {
@@ -155,8 +155,8 @@ Login Succeeded
 
 ===================================================================================
 
-Furthermore, a basic unit test was used to check if response was successfully being obtained as GET.
-
+**Furthermore, a basic unit test was used to check if response was successfully being obtained as GET.
+**
 
 [Pipeline] { (Unit Tests)
 [Pipeline] script
