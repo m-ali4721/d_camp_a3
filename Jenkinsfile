@@ -43,5 +43,15 @@ pipeline {
             }
         }
 
+        stage('Unit Tests') {
+            steps {
+                script {
+                    docker.withRegistry('', registryCredential) {
+                        docker.image(registry).run("-v ${WORKSPACE}:/app ${registry} python -m unittest discover tests")
+                    }
+                }
+            }
+        }
+
         }
     }
