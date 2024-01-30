@@ -33,7 +33,7 @@ pipeline {
             }
         }
 
-        stage(docker run){
+        stage('docker run'){
             steps {
                 script{
                     docker.withRegistry('', registryCredential) {
