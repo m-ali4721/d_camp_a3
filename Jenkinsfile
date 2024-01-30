@@ -4,7 +4,7 @@ pipeline {
     environment {
         dockerImage =''
         registry = 'makbar4721/dicea3'
-        registrCredential='dockerhub_id'
+        registryCredential='dockerhub_id'
     }
 
     stages{
