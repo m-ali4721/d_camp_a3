@@ -1,8 +1,7 @@
-**Jenkins has been used as the CI/CD Tool:
+Jenkins has been used as the CI/CD Tool:
 
 
 Docker Image was created to build app.py application by using the stage of Build with corresponding script and following Output was produced depicting that it was successfully built and exported to Dockerhub:
-**
 ==================================================================================
 docker build -t makbar4721/dicea3 .
 #0 building with "default" instance using docker driver
