@@ -124,8 +124,8 @@ dbf081da55eb: Pushed
 
 ===================================================================================
 
-**Moving forward, next stage for Docker Run was used through utilizing the previously built image and port was bound to 8020:
-**
+**Moving forward, next stage for Docker Run was used through utilizing the previously built image and port was bound to 8020:**
+
 [Pipeline] { (docker run)
 [Pipeline] script
 [Pipeline] {
@@ -155,8 +155,8 @@ Login Succeeded
 
 ===================================================================================
 
-**Furthermore, a basic unit test was used to check if response was successfully being obtained as GET.
-**
+**Furthermore, a basic unit test was used to check if response was successfully being obtained as GET.**
+
 
 [Pipeline] { (Unit Tests)
 [Pipeline] script
